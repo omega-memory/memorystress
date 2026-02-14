@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "MemoryStress: The First Longitudinal Benchmark for AI Memory Systems"
+message: "If you use this benchmark, please cite it as below."
+type: software
+authors:
+  - name: "OMEGA Memory"
+repository-code: "https://github.com/omega-memory/memorystress"
+url: "https://github.com/omega-memory/memorystress"
+abstract: >-
+  MemoryStress is a longitudinal benchmark for evaluating AI agent memory
+  systems, LLM memory retention, and RAG pipeline degradation across 1,000
+  sessions spanning 10 simulated months. It measures 6 dimensions: recall
+  by age, degradation curves, contradiction resolution, cost efficiency,
+  cross-agent recall, and cold start recovery.
+keywords:
+  - benchmark
+  - ai-agents
+  - llm
+  - memory-systems
+  - evaluation
+  - rag
+  - long-term-memory
+  - openai
+  - claude
+  - mcp
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-02-14"

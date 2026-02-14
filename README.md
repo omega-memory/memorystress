@@ -30,6 +30,15 @@ Real agents — Claude Code, ChatGPT with memory, custom OpenAI Assistants, Lang
 
 MemoryStress measures all of these.
 
+## Use Cases
+
+- **Evaluate production memory systems** before deploying long-running AI agents
+- **Compare RAG approaches**: vector databases, graph memory, hybrid retrieval systems
+- **Benchmark MCP memory servers** for Claude Code, Claude Desktop, Cursor, Cline, Windsurf
+- **Test OpenAI Assistants API** thread persistence and memory retention
+- **Validate custom memory architectures** against a standardized dataset
+- **Research memory degradation** in conversational AI systems over time
+
 ## Leaderboard
 
 | System | Model | Score | Contradiction | Degradation Slope | Cost/Correct | Details |

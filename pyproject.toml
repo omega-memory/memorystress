@@ -5,23 +5,35 @@ build-backend = "setuptools.backends._legacy:_Backend"
 [project]
 name = "memorystress"
 version = "0.1.0"
-description = "The first longitudinal benchmark for AI memory systems"
+description = "Longitudinal benchmark for AI memory systems — test LLM agents, RAG pipelines, MCP servers, and memory backends across 1,000 sessions"
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.11"
 authors = [
     {name = "OMEGA Memory", email = "hello@omegamax.co"},
 ]
-keywords = ["benchmark", "memory", "llm", "ai-agents", "evaluation", "rag"]
+keywords = [
+    "benchmark", "memory", "llm", "ai-agents", "evaluation", "rag",
+    "openai", "claude", "anthropic", "gpt-4", "langchain", "mem0", "zep",
+    "mcp", "vector-database", "long-term-memory", "ai-memory",
+    "retrieval-augmented-generation", "knowledge-retention",
+    "conversational-ai", "chatbot-memory", "agent-evaluation",
+    "memory-degradation", "semantic-memory", "multi-session",
+]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Operating System :: OS Independent",
+    "Typing :: Typed",
 ]
 dependencies = [
     "openai>=1.0",
@@ -37,6 +49,8 @@ all = ["omega-memory>=0.6.0", "mem0ai>=0.1.0", "anthropic>=0.20.0"]
 Homepage = "https://github.com/omega-memory/memorystress"
 Repository = "https://github.com/omega-memory/memorystress"
 Issues = "https://github.com/omega-memory/memorystress/issues"
+Documentation = "https://github.com/omega-memory/memorystress#readme"
+Dataset = "https://huggingface.co/datasets/singularityjason/memorystress"
 
 [project.scripts]
 memorystress = "memorystress.cli:main"

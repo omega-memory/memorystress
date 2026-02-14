@@ -1,4 +1,9 @@
-"""MemorySystemAdapter — abstract interface for pluggable memory backends."""
+"""MemorySystemAdapter — abstract interface for pluggable memory backends.
+
+Implement this to benchmark any memory system: OMEGA, Mem0, Zep, LangMem,
+OpenAI Assistants, MCP memory servers, custom RAG pipelines, vector databases,
+or knowledge graphs.
+"""
 
 from __future__ import annotations
 
