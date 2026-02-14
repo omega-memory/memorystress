@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+.env
+*.json
+!results/**/*.json
+!data/README.md
+!pyproject.toml
+.pytest_cache/
+.mypy_cache/

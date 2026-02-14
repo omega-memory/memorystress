@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "memorystress"
+version = "0.1.0"
+description = "The first longitudinal benchmark for AI memory systems"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [
+    {name = "OMEGA Memory", email = "hello@omegamax.co"},
+]
+keywords = ["benchmark", "memory", "llm", "ai-agents", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "openai>=1.0",
+]
+
+[project.optional-dependencies]
+omega = ["omega-memory>=0.6.0"]
+mem0 = ["mem0ai>=0.1.0"]
+anthropic = ["anthropic>=0.20.0"]
+all = ["omega-memory>=0.6.0", "mem0ai>=0.1.0", "anthropic>=0.20.0"]
+
+[project.urls]
+Homepage = "https://github.com/omega-memory/memorystress"
+Repository = "https://github.com/omega-memory/memorystress"
+Issues = "https://github.com/omega-memory/memorystress/issues"
+
+[project.scripts]
+memorystress = "memorystress.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["memorystress*"]
