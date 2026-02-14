@@ -2,6 +2,8 @@
 
 **The first longitudinal benchmark for AI memory systems.**
 
+Test any memory system — [OMEGA](https://github.com/omega-memory/core), [Mem0](https://github.com/mem0ai/mem0), [Zep](https://github.com/getzep/zep), [LangMem](https://github.com/langchain-ai/langmem), or your own — against 1,000 sessions of realistic agent conversations. Works with OpenAI, Anthropic Claude, Google Gemini, or any LLM backend.
+
 Every existing memory benchmark tests recall from a handful of sessions. MemoryStress tests what happens at session 1,000 — when facts contradict, memories fade, and noise accumulates over 10 simulated months.
 
 ```
@@ -19,7 +21,7 @@ Current benchmarks don't test what breaks in production:
 | BEAM | Synthetic | No | No | No |
 | **MemoryStress** | **1,000** | **Yes (40 chains)** | **Yes (4 checkpoints)** | **Yes** |
 
-Real agents run for months. Their memory systems face:
+Real agents — Claude Code, ChatGPT with memory, custom OpenAI Assistants, LangChain agents — run for months. Their memory systems face:
 - **Accumulation pressure**: 1,000 sessions of growing noise
 - **Contradiction resolution**: Facts that change, revert, and partially update
 - **Degradation over time**: Can you still find a fact from session 12 after ingesting session 997?
@@ -35,6 +37,9 @@ MemoryStress measures all of these.
 | **OMEGA v1.0** | GPT-4o | **32.7%** (98/300) | 21.4% | -0.033 | $0.041 | [results](results/omega_v5/) |
 | Raw Context | GPT-4o | TBD | TBD | TBD | TBD | — |
 | Mem0 | GPT-4o | TBD | TBD | TBD | TBD | — |
+| Zep | — | TBD | TBD | TBD | TBD | — |
+| LangMem | — | TBD | TBD | TBD | TBD | — |
+| ChatGPT Memory | — | TBD | TBD | TBD | TBD | — |
 | Null (baseline) | — | 0% | 0% | 0.000 | — | [results](results/null/) |
 
 > **32.7% is a strong result on an intentionally brutal benchmark.** The null baseline scores 0%. A context-window approach hits its token ceiling around session 200. This benchmark asks about single-mention facts buried in noisy conversations from hundreds of sessions ago.
@@ -102,6 +107,8 @@ Phase 4 (Recovery)           No new sessions — can you still recall?
 - Fact recall, Preference recall, Contradiction resolution, Temporal ordering, Cross-agent recall, Cold start recall, Single-mention recall
 
 ## Add Your Memory System
+
+Built an MCP memory server? Using OpenAI's Assistants API with threads? Running Mem0, Zep, LangMem, or a custom RAG pipeline? Test it here.
 
 Implement 4 methods:
 
